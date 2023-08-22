@@ -4,17 +4,12 @@ import { PoMenuItem } from '@po-ui/ng-components';
 import { PoDialogService } from '@po-ui/ng-components';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-parametro',
+  templateUrl: './parametro.component.html',
+  styleUrls: ['./parametro.component.css']
 })
 
-export class AppComponent {
-
-  readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', link: '/home' },
-    { label: 'Parâmetros', link: '/parametro'}
-  ];
+export class ParametroComponent {
 
   constructor(private poDialog: PoDialogService) {}
 
@@ -40,16 +35,19 @@ export class AppComponent {
     },
   ];
 
-  private menuHome() {
-    alert('Clicado no menu Home')
-  }
 
-  private menuParametros() {
-    alert('Clicado no menu Parametros')
+  btnIncluir() {
+    this.poDialog.alert({ title: 'PO Button', message: 'Incluir' });
   }
-
+  btnAlterar() {
+    this.poDialog.alert({ title: 'PO Button', message: 'Alterar' });
+  }
+  btnExcluir() {
+    this.poDialog.alert({ title: 'PO Button', message: 'Excluir' });
+  }
   btnFiltrar() {
-    this.poDialog.alert({ title: 'PO Button', message: 'Hello PO World!!!' });
+    this.poDialog.alert({ title: 'PO Button', message: 'Filtrar' });
   }
+
 
 }

@@ -1,0 +1,25 @@
+<div class="po-wrapper">
+
+    <po-page-default p-title="TELA PARAMETRO" class="po-ed-9">
+
+      <div class="po-row">
+        <p> Segue abaixo os parametros encotnrados no TSS http://localhost:8080</p>
+      </div>
+
+      <hr/>
+
+      <div class="po-row">
+        <po-button p-label="Incluir" (p-click)="btnIncluir()"> </po-button>
+        <po-button p-label="Alterar" (p-click)="btnAlterar()"> </po-button>
+        <po-button p-label="Excluir" (p-click)="btnExcluir()"> </po-button>
+        <po-button p-label="Filtro" (p-click)="btnFiltrar()"> </po-button>
+      </div>
+
+      <hr/>
+
+      <po-grid [p-data]="data" [p-columns]="columns"></po-grid>
+
+    </po-page-default>
+
+  </div>
+
